@@ -1,5 +1,3 @@
-'use client';
-
 import Pagination from "@/app/ui/pagination";
 import AdoptionPg1 from "./1/page";
 import AdoptionPg2 from "./2/page";

@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
+'use client';
+
+import { useState, useEffect, useCallback } from 'react';
 import { Progress, Typography } from "@material-tailwind/react";
 
 export function ProgressBar({ value, pgNo, pgLen }) {

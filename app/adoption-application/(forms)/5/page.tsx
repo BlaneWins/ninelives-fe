@@ -1,4 +1,5 @@
-import React from 'react';
+'use client';
+
 import {Card, Checkbox, Input, Option, Radio, Select, Typography} from "@material-tailwind/react";
 
 

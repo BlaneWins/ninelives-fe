@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import { useState } from 'react';
 import {Select, Option, Input, Radio, Typography, Card } from "@material-tailwind/react";
 
 export default function Page() {
@@ -9,7 +11,7 @@ export default function Page() {
     </Select>
   );
 
-  const [status, setStatus] = React.useState(0)
+  const [status, setStatus] = useState(0)
 
   const radioHandler = (status) => {
     setStatus(status);

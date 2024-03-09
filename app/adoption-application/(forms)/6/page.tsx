@@ -1,6 +1,6 @@
-import {Card, Typography, Textarea} from "@material-tailwind/react";
-import React from "react";
+'use client';
 
+import {Card, Typography, Textarea} from "@material-tailwind/react";
 
 export default function Page() {
   return (

@@ -1,4 +1,5 @@
-import React from "react";
+'use client';
+
 import { Option, Select, Card, Typography } from "@material-tailwind/react";
 import { PetInfo } from '@/app/components/PetInfo';
 

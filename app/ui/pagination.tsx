@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+'use client';
+
+import { useState } from "react";
 import {Button, Typography} from "@material-tailwind/react";
 import { ProgressBar } from "./progress-bar";
 
