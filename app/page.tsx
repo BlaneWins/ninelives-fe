@@ -10,7 +10,7 @@ export default function Page() {
 
   return (
       <>
-        <div className="flex flex-column flex-md-row h-[50vh] mt-20">
+        <div className="flex flex-column flex-md-row h-[1000px]">
           <div className="flex flex-1 items-center z-10">
             <div className="p-10">
               <h3 className="text-5xl font-bold">Be a Hero to Furry Friends: Support Our Cat Rescue Mission!</h3>
@@ -26,7 +26,7 @@ export default function Page() {
             <Image className="w-full" src={heroImg} alt="" />
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center m-4 h-[90vh]">
+        <div className="flex flex-col justify-start items-center m-4 h-[1000px]">
           <h2 className="text-2xl mb-2">Featured Cats:</h2>
           <CatCard />
         </div>

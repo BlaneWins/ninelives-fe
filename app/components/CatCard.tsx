@@ -26,21 +26,19 @@ export function CatCard() {
     <div className="flex justify-evenly gap-4 w-full">
       {data.map((item : any, key) => (
         <Card className="w-96" key={key} >
-          <CardHeader floated={false} className="h-80">
-            <Image src={item.PrimaryPictureUrl} alt="profile-picture" className="w-full h-full object-cover" />
+          <CardHeader floated={false} className="h-64 w-64 mx-auto">
+            <Image src={item.PrimaryPictureUrl} alt="profile-picture" className="w-full h-full object-cover" height={250} width={250} />
           </CardHeader>
 
-          <CardBody className="text-center">
-            <Typography variant="h4" color="blue-gray" className="mb-2">
+          <CardBody className="text-center p-2">
+            <Typography variant="h5" color="blue-gray">
               {item.Attributes.Name}
             </Typography>
-            <Typography color="blue-gray" className="font-medium" textGradient>
+            <Typography color="blue-gray" className="font-small" textGradient>
               {item.Attributes.AgeGroup}
             </Typography>
-          </CardBody>
 
-          <CardFooter className="flex flex-col justify-center pt-0">
-            <div className="flex flex-row justify-center gap-2 mb-4">
+            <div className="flex flex-row justify-center gap-2 mt-2">
               <Chip
                 size="sm"
                 variant="outlined"
@@ -54,7 +52,10 @@ export function CatCard() {
                 value="Affectionate"
               />
             </div>
-            <p className="line-clamp-3">
+          </CardBody>
+
+          <CardFooter className="flex flex-col justify-center p-6">
+            <p className="line-clamp-3 text-sm">
               {item.Attributes.DescriptionText}
             </p>
             <div className="card-actions flex justify-center w-full mt-4">
