@@ -8,6 +8,7 @@ import {
   Chip,
   Typography,
 } from "@material-tailwind/react";
+import Image from "next/image";
 
 
 export function CatCard() {
@@ -26,7 +27,7 @@ export function CatCard() {
       {data.map((item : any, key) => (
         <Card className="w-96" key={key} >
           <CardHeader floated={false} className="h-80">
-            <img src={item.PrimaryPictureUrl} alt="profile-picture" className="w-full h-full object-cover" />
+            <Image src={item.PrimaryPictureUrl} alt="profile-picture" className="w-full h-full object-cover" />
           </CardHeader>
 
           <CardBody className="text-center">

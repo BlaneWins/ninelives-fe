@@ -5,7 +5,7 @@ export default function Page() {
   const states = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming']
   const StateList = () => (
     <Select variant="standard" label="State">
-      {states.map(state => <Option>{ state }</Option>) }
+      {states.map(state => <Option key={state}>{ state }</Option>) }
     </Select>
   );
 
@@ -50,7 +50,7 @@ export default function Page() {
                     clipRule="evenodd"
                   />
                 </svg>
-                If multiple, list seperated by commas, if name unknown put "Cat"
+                If multiple, list seperated by commas, if name unknown put &quot;Cat&quot;
               </Typography>
             </div>
 

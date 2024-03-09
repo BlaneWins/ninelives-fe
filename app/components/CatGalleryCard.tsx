@@ -11,6 +11,7 @@ import {
   Chip,
 } from "@material-tailwind/react";
 import React, { useEffect, useState } from "react";
+import Image from 'next/image';
 
 export function CatGalleryCard() {
   const [data, setData] = useState([]);
@@ -29,7 +30,7 @@ export function CatGalleryCard() {
         // eslint-disable-next-line react/jsx-key
         <Card className="w-96">
           <CardHeader floated={false} className="h-80">
-            <img src={item.PrimaryPictureUrl} alt="profile-picture" className="w-full h-full object-cover" />
+            <Image src={item.PrimaryPictureUrl} alt="profile-picture" className="w-full h-full object-cover" />
           </CardHeader>
 
           <CardBody className="text-center">
