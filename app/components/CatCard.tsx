@@ -23,9 +23,9 @@ export function CatCard() {
   }, []);
 
   return (
-    <div className="flex justify-evenly gap-4 w-full">
+    <div className="flex flex-col md:flex-row justify-evenly gap-4 w-full">
       {data.map((item : any, key) => (
-        <Card className="w-96" key={key} >
+        <Card className="w-64 md:w-96 mx-auto" key={key} >
           <CardHeader floated={false} className="h-64 w-64 mx-auto">
             <Image src={item.PrimaryPictureUrl} alt="profile-picture" className="w-full h-full object-cover" height={250} width={250} />
           </CardHeader>

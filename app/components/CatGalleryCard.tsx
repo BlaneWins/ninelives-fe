@@ -28,7 +28,7 @@ export function CatGalleryCard() {
     <>
       {data.map((item : any) => (
         // eslint-disable-next-line react/jsx-key
-        <Card className="w-96">
+        <Card className="w-64 md:w-96 mx-auto">
           <CardHeader floated={false} className="h-64 w-64 mx-auto">
             <Image src={item.PrimaryPictureUrl} alt="profile-picture" className="w-full h-full object-cover" height={250} width={250} />
           </CardHeader>
