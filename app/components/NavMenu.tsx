@@ -3,6 +3,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from 'react';
 import Link from "next/link";
+import Image from "next/image";
 
 import {
     Navbar,
@@ -21,6 +22,8 @@ import {
     Bars3Icon,
     XMarkIcon,
 } from "@heroicons/react/24/outline";
+
+import logo from "@/public/images/9LivesLogoCat.png"
 
 
 const navListMenuItems = [
@@ -152,7 +155,7 @@ function NavList() {
     );
 }
 
-export function NavMenu() {
+export function NavMenu({font}) {
     const [openNav, setOpenNav] = useState(false);
 
     useEffect(() => {
@@ -169,9 +172,12 @@ export function NavMenu() {
                     as="a"
                     href="/"
                     variant="h6"
-                    className="mr-4 cursor-pointer py-1.5 lg:ml-2"
+                    className={`${font} mr-4 cursor-pointer py-1.5 lg:ml-2`}
                 >
+                  <Image className="inline-block" src={logo} height={45} width={45} alt="9 Lives Logo" />
+                  <h2 className="inline-block ml-2">
                     9 Lives Cat Rescue
+                  </h2>
                 </Typography>
                 <div className="hidden lg:block">
                     <NavList />
