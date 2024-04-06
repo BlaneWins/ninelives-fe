@@ -40,24 +40,21 @@ export function CatGalleryCard() {
             <Typography color="blue-gray" className="font-small" textGradient>
               {item.Attributes.AgeGroup}
             </Typography>
-
-            <div className="flex flex-row justify-center gap-2 mt-2">
-              <Chip
-                size="sm"
-                variant="outlined"
-                className="rounded-full text-black lowercase"
-                value="Playful"
-              />
-              <Chip
-                size="sm"
-                variant="outlined"
-                className="rounded-full text-black lowercase"
-                value="Affectionate"
-              />
-            </div>
           </CardBody>
 
           <CardFooter className="flex flex-col justify-center p-6">
+            <div className="flex flex-row justify-center gap-2 mb-4">
+              {item.Attributes.Qualities.map((quality) => (
+                <Chip
+                  key={quality}
+                  size="sm"
+                  variant="outlined"
+                  className="rounded-full text-black lowercase"
+                  value={quality}
+                />
+              ))
+              }
+            </div>
             <p className="line-clamp-3 text-sm">
               {item.Attributes.DescriptionText}
             </p>
