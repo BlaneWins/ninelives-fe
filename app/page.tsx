@@ -47,11 +47,11 @@ const Page = () => {
             </p>
 
             <Link href="available-cats">
-              <Button className="btn btn-primary bg-primary mt-6 text-white">Browse Cats</Button>
+              <Button className="btn btn-primary bg-primary w-full md:w-48 mt-6 text-white block md:inline-block mx-auto">Browse Cats</Button>
             </Link>
 
             <Link href="about">
-              <Button className="btn text-accent border-accent mt-6 ml-6" variant="outlined" >About Our Mission</Button>
+              <Button className="btn text-accent border-accent w-full md:w-48 mt-6 md:ml-6 block md:inline-block mx-auto" variant="outlined" >About Our Mission</Button>
             </Link>
 
 
@@ -70,7 +70,7 @@ const Page = () => {
       </div>
 
 
-      <div className="flex gap-10 mt-6 justify-center items-center">
+      <div className="flex flex-col md:flex-row gap-10 mt-6 justify-center items-center">
         <Card className="w-72 h-48 p-4 items-center justify-evenly bg-primary text-white">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
                stroke="currentColor" className="w-12 h-12">
