@@ -39,3 +39,36 @@ img {
     max-width: 100%;
     display: block;
 }
+
+/* Ellipse 1 */
+
+.bg-shape {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    z-index: -1;
+}
+
+.bg-blur {
+    filter: blur(80px);
+}
+
+.bg-emerald {
+    left: -10px;
+    top: 10px;
+    background: conic-gradient(from 44.38deg at 26.15% 92.69%, #06D6A0 0deg, rgba(13, 148, 136, 0) 360deg);
+
+}
+
+.bg-xanthous {
+    right: 700px;
+    top: 450px;
+    background: conic-gradient(from -51.38deg at 68.85% 66.54%, #FFBD4C 0deg, rgba(13, 148, 136, 0) 360deg);
+    mix-blend-mode: color-burn;
+}
+
+.bg-bright-pink {
+    right: 300px;
+    top: 750px;
+    background: conic-gradient(from -51.38deg at 68.85% 66.54%, #EF476F 0deg, rgba(13, 148, 136, 0) 360deg);
+}
