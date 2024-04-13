@@ -85,8 +85,8 @@ export default function Page() {
             <div className="col-span-2">
               <Typography>If you currently have a dog/cat, are you using heartworm preventative?</Typography>
               <div className="flex gap-10 text-sm">
-                <Radio name="type" label="Yes" crossOrigin={undefined}/>
-                <Radio name="type" label="No" crossOrigin={undefined}/>
+                <Radio name="currentHeartworm" label="Yes" crossOrigin={undefined}/>
+                <Radio name="currentHeartworm" label="No" crossOrigin={undefined}/>
               </div>
               <Input variant="standard"
                      label="If so, what kind:"
@@ -96,8 +96,8 @@ export default function Page() {
             <div className="col-span-2">
               <Typography>If you currently have a dog/cat, are you using flea and tick preventative?</Typography>
               <div className="flex gap-10 text-sm">
-                <Radio name="type" label="Yes" crossOrigin={undefined}/>
-                <Radio name="type" label="No" crossOrigin={undefined}/>
+                <Radio name="currentFlea" label="Yes" crossOrigin={undefined}/>
+                <Radio name="currentFlea" label="No" crossOrigin={undefined}/>
               </div>
               <Input variant="standard"
                      label="If so, what kind:"

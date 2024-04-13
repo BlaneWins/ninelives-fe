@@ -107,10 +107,10 @@ export function AddPet() {
 
   const handleOpen = () => setOpen(!open);
 
-  const [status, setStatus] = React.useState(0)
+  const [status, setStatus] = React.useState('')
 
-  const radioHandler = (status) => {
-    setStatus(status);
+  const radioHandler = (e) => {
+    setStatus(e.target.value);
   };
 
   return (
@@ -124,36 +124,36 @@ export function AddPet() {
           <fieldset className="w-3/4 mx-auto mb-10">
             <div className="md:grid gap-6 md:grid-cols-2 max-w-screen-lg">
 
-              <Input variant="outlined" label="Pet Name" placeholder="Pet Name" crossOrigin={undefined} />
-              <Input variant="outlined" label="Age" placeholder="Age" crossOrigin={undefined} />
-              <Input variant="outlined" label="Breed/Type" placeholder="Breed/Type" crossOrigin={undefined} />
+              <Input variant="standard" label="Pet Name" crossOrigin={undefined} />
+              <Input variant="standard" label="Age" crossOrigin={undefined} />
+              <Input variant="standard" label="Breed/Type" crossOrigin={undefined} />
 
               <br/>
               <div>
                 <Typography className="text-blue-gray-500 font-normal">Gender</Typography>
                 <div className="flex gap-10 text-sm text-blue-gray-500 font-normal">
-                  <Radio name="type" label="Male" crossOrigin={undefined} />
-                  <Radio name="type" label="Female" crossOrigin={undefined} />
+                  <Radio name="gender" label="Male" crossOrigin={undefined} />
+                  <Radio name="gender" label="Female" crossOrigin={undefined} />
                 </div>
               </div>
 
               <div>
                 <Typography className="text-blue-gray-500 font-normal">Spayed/Neutered</Typography>
                 <div className="flex gap-10 text-sm text-blue-gray-500 font-normal">
-                  <Radio name="type" label="Yes" crossOrigin={undefined} />
-                  <Radio name="type" label="No" crossOrigin={undefined} />
+                  <Radio name="fixed" label="Yes" crossOrigin={undefined} />
+                  <Radio name="fixed" label="No" crossOrigin={undefined} />
                 </div>
               </div>
 
               <div>
                 <Typography className="text-blue-gray-500 font-normal">Current Pet?</Typography>
                 <div className="flex gap-10 text-sm text-blue-gray-500 font-normal">
-                  <Radio name="type" label="Yes" checked={status === 1} onClick={(e) => radioHandler(1)} crossOrigin={undefined} />
-                  <Radio name="type" label="No" checked={status === 2} onClick={(e) => radioHandler(2)} crossOrigin={undefined} />
+                  <Radio name="current" label="Yes" value='yes' checked={status === 'yes'} onChange={radioHandler} crossOrigin={undefined} />
+                  <Radio name="current" label="No" value='no' checked={status === 'no'} onChange={radioHandler} crossOrigin={undefined} />
                 </div>
               </div>
 
-              {status === 2 && (
+              {status === 'no' && (
                 <div className="col-span-2">
                   <Input variant="outlined" label="What happened to the pet?" crossOrigin={undefined} />
                 </div>
