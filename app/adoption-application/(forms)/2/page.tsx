@@ -4,11 +4,16 @@ import { useState } from 'react';
 import {Checkbox, Input, Option, Select, Radio, Typography, Card } from "@material-tailwind/react";
 
 export default function Page() {
-  const [status, setStatus] = useState(0)
+  const [homeStatus, setHomeStatus] = useState('')
+  const [petFee, setPetFee] = useState('')
 
-  const radioHandler = (status) => {
-    setStatus(status);
+  const radioHandler = (e) => {
+    setHomeStatus(e.target.value);
   };
+
+  const changeSelection = (e)=>{
+    setPetFee(e.target.value);
+  }
 
   return (
     <>
@@ -31,12 +36,12 @@ export default function Page() {
             <div className="col-span-2">
               <Typography className="text-blue-gray-500 font-normal">Do You Rent Or Own?</Typography>
               <div className="flex gap-10 text-sm text-blue-gray-500 font-normal">
-                <Radio name="type" label="I rent/lease" checked={status === 1} onClick={(e) => radioHandler(1)} crossOrigin={undefined} />
-                <Radio name="type" label="I own" checked={status === 2} onClick={(e) => radioHandler(2)} crossOrigin={undefined} />
+                <Radio name="homeType" label="I rent/lease" value="rent" checked={homeStatus === 'rent'} onChange={radioHandler} crossOrigin={undefined} />
+                <Radio name="homeType" label="I own" value="own" checked={homeStatus === 'own'} onChange={radioHandler} crossOrigin={undefined} />
               </div>
             </div>
 
-            {status === 1 && (
+            {homeStatus === 'rent' && (
               <>
                 <Input variant="standard" label="Rental Company Name" crossOrigin={undefined} />
                 <Input variant="standard" label="Landlord's Name" crossOrigin={undefined} />
@@ -45,8 +50,8 @@ export default function Page() {
                 <div className="col-span-2">
                   <Typography className="text-blue-gray-500 font-normal">Is There A Pet Fee?</Typography>
                   <div className="flex gap-10 text-sm text-blue-gray-500 font-normal">
-                    <Radio name="type" label="Yes" crossOrigin={undefined} />
-                    <Radio name="type" label="No" crossOrigin={undefined} />
+                    <Radio name="petFee" label="Yes" crossOrigin={undefined} />
+                    <Radio name="petFee" label="No" crossOrigin={undefined} />
                   </div>
                 </div>
 
@@ -107,12 +112,12 @@ export default function Page() {
             <div className="col-span-2">
               <Typography className="text-blue-gray-500 font-normal">Do Any Members Suffer From Pet Allergies?</Typography>
               <div className="flex gap-10 text-sm text-blue-gray-500 font-normal">
-                <Radio name="type" label="Yes" checked={status === 3} onClick={(e) => radioHandler(3)} crossOrigin={undefined} />
-                <Radio name="type" label="No" checked={status === 4} onClick={(e) => radioHandler(4)} crossOrigin={undefined} />
+                <Radio name="type" label="Yes" value='yes' checked={petFee === 'yes'} onChange={changeSelection} crossOrigin={undefined} />
+                <Radio name="type" label="No" value='no' checked={petFee === 'no'} onChange={changeSelection} crossOrigin={undefined} />
               </div>
             </div>
 
-            {status === 3 && (
+            {petFee === 'yes' && (
               <div>
                 <Typography className="text-blue-gray-500 font-normal">Allergic To</Typography>
                 <div className="columns-2">

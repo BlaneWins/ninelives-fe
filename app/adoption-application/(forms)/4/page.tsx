@@ -19,8 +19,8 @@ export default function Page() {
             <div>
               <Typography>Will the animal live with you?</Typography>
               <div className="flex gap-10 text-sm">
-                <Radio name="type" label="Yes" crossOrigin={undefined}/>
-                <Radio name="type" label="No" crossOrigin={undefined}/>
+                <Radio name="animalLive" label="Yes" crossOrigin={undefined}/>
+                <Radio name="animalLive" label="No" crossOrigin={undefined}/>
               </div>
             </div>
 
@@ -31,8 +31,8 @@ export default function Page() {
             <div>
               <Typography>Have you ever surrendered an animal to a shelter?</Typography>
               <div className="flex gap-10 text-sm">
-                <Radio name="type" label="Yes" crossOrigin={undefined}/>
-                <Radio name="type" label="No" crossOrigin={undefined}/>
+                <Radio name="surrender" label="Yes" crossOrigin={undefined}/>
+                <Radio name="surrender" label="No" crossOrigin={undefined}/>
               </div>
             </div>
 
@@ -45,8 +45,8 @@ export default function Page() {
               <Typography>Would you agree to a <strong className="font-bold">9 Lives Cat Rescue</strong> representative
                 visiting your home to check on the animal you are adopting?</Typography>
               <div className="flex gap-10 text-sm">
-                <Radio name="type" label="Yes" crossOrigin={undefined}/>
-                <Radio name="type" label="No" crossOrigin={undefined}/>
+                <Radio name="homeVisit" label="Yes" crossOrigin={undefined}/>
+                <Radio name="homeVisit" label="No" crossOrigin={undefined}/>
               </div>
             </div>
 
